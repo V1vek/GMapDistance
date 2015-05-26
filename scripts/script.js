@@ -51,11 +51,10 @@
 	}
 
 	function callback(response, status) {
-
-    if(status=="OK") {
-    	var result = document.getElementById("outputDiv");
-        result.innerHTML = response.rows[0].elements[0].distance.text;
-    } else {
-        alert("Error: " + status);
-    }
-}
+		if(status=="OK") {
+			var result = document.getElementById("outputDiv");
+			result.innerHTML = response.rows[0].elements[0].distance.text;
+		} else {
+			alert("Error: " + status);
+		}
+	}
